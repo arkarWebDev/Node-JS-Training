@@ -1,3 +1,21 @@
+# DAY - 3
+
+In section 1 :-
+
+Study about express js routing such as ( send, sendFile, redirect, route handler)
+
+## Syntax
+
+```bash
+  ^/$|index(.html)?
+```
+
+(.html)? means it's optional.
+
+| means or operator.
+
+^/$ means can be anything beside / .
+
 # DAY - 4
 
 Study about middleware & router
