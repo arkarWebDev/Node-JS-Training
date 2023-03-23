@@ -2,26 +2,12 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const cors = require("cors");
+const corsOptions = require("./config/corsOptions");
 
 const { errorHandler } = require("./middleware/errorHandler");
-
 const PORT = 3500;
 
 // cors
-const whitelist = [
-  "https://ww.sitename.com",
-  "http://123.0.0.1:5500",
-  "http://localhost:3500/",
-];
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("not allowed by cors."));
-    }
-  },
-};
 app.use(cors(corsOptions));
 
 // built-in middleware to handle form data
